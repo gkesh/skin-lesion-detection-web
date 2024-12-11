@@ -26,6 +26,10 @@ Run the application
 
 Here are some sample classifications
 
+| Landing Page | Classification Result |
+| ------------ | --------------------- |
+| ![Landing](static/img/screenshots/landing.png) | ![Classify](static/img/screenshots/classify.png) |
+
 # Disclaimer
 
 This application is not designed for commercial purposes, and no gurantees can be made on the validity of the classifications generated. Always refer to trained professionals before medicating yourself.
