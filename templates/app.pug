@@ -1,0 +1,45 @@
+!!! 5
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title HAM10000 Skin Disease Classifier
+        link(rel="stylesheet" type="text/css" href="/static/css/app.css")
+        link(rel="stylesheet" type="text/css" href="/static/css/form.css")
+        link(rel="icon" href="/static/favicon.ico")
+    body
+        header.flex.centered 
+            nav.container.flex.between.frow
+                img#logo(src="/static/img/logo.png" alt="Skanalyzer")
+                button#refresh.button.accent(type="button") ⟲
+        main.flex.centered 
+            section.container.pt-2.mb-space 
+                .box.flex.centered.frow.mb-2
+                    img(src="/static/img/reports.gif")
+                    .content
+                        h1.title.mb-0.mt-0 Skin Test
+                        p Here you can upload an image of your skin blemishes and get a result from our AI application. Please note that the results are data driven speculation and should not be taken as medical fact. Always confer to a physician for a second opinion.
+                form#analyzer
+                    input#file(type="file", name="image")
+                    img#preview(src="#", alt="")
+                    button.button.primary(type="submit") Analyze
+                #loading.hidden.mt-2
+                    .flex.centered
+                        img.spinner(src="/static/img/spinner.png")
+                #success.hidden.mt-2
+                    .box.success.flex.centered.frow 
+                        img(src="/static/img/success.gif")
+                        .content
+                            p 
+                                | According to our analysis, the image is classified as 
+                                b#result
+                                |  with confidence of 
+                                b
+                                    i#confidence
+                #failure.hidden.mt-2
+                    .box.flex.centered.frow
+                        img(src="/static/img/failure.gif")
+                        .content
+                            p Sorry! we failed to complete your request. We ran into the an error: <b class="error" id="error"></b>
+        script(src="/static/js/app.js")

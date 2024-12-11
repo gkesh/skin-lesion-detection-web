@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+form > * {
+    max-width: 100%;
+}
+
+input, select {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 20px;
+    background-color: var(--app-muted);
+    color: var(--app-text);
+    border-radius: var(--radius-md);
+    border: none;
+}
+
+select  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+img#preview {
+    border-radius: var(--radius-md);
+}

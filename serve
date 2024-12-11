@@ -1,0 +1,11 @@
+#! /bin/bash
+
+source ./ham10000_web/bin/activate
+
+export QUART_APP=app:app
+export QUART_ENV=development
+export QUART_DEBUG=1
+quart run --host=0.0.0.0
+
+# For deployment using ASGI server
+# hypercorn app:app
